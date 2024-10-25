@@ -23,6 +23,7 @@ y= int(input("y: "))
 z= x/y
 print(f"{z:.50f}")
 """
+"""
 def get_int(prompt):
     while True:
         try:
@@ -36,3 +37,18 @@ def main():
     print (x+y)
 
 main() #need to call main func
+"""
+people= [
+  {"name": "Carter", "number": "1+617-495-1000"},
+  {"name": "David", "number": "1+617-495-1000"},
+  {"name": "John", "number": "1+949-468-2750"},
+]
+
+name = input("Name: ")
+for person in people:
+  if person["name"] == name:
+    number = person ["number"]
+    print(f"Found {number}")
+    break
+else:
+  print("Not found")
