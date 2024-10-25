@@ -1,42 +1,20 @@
 """
-from cs50 import get_int
-x= get_int("x: ")  #1
-y= get_int("y: ")  #1
+names= ["Berra","Behnan","Enes"]
+name= input("Name: ")
+""
 
-print(x + y)  #2
-
-
-x= input("x: ")  #1
-y= input("y: ")  #1
-
-print(x + y)  #11
-
-x= int(input("x: "))  #1
-y= int(input("y: "))  #1
-
-print(x + y)  #2
+for n in names:
+    if n == name:
+        print("Found")
+        break
+else: #the indentation here is so important
+    print("Not found")
+""
+if name in names:
+    print("Found")
+else:
+    print("Not found")
 """
-"""
-x= int(input("x: "))
-y= int(input("y: "))
-
-z= x/y
-print(f"{z:.50f}")
-"""
-"""
-def get_int(prompt):
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError: #you can try to type 'cat' as a input
-            print("Not an integer") #pass
-
-def main():
-    x= get_int("x: ")
-    y= get_int("y: ")
-    print (x+y)
-
-main() #need to call main func
 """
 people= [
   {"name": "Carter", "number": "1+617-495-1000"},
@@ -52,3 +30,15 @@ for person in people:
     break
 else:
   print("Not found")
+"""
+people = {
+    "Carter": "1+617-495-1000",
+    "David": "1+617-495-1000",
+    "John": "1+949-468-2750",
+}
+name = input("Name: ")
+if name in people:
+    number= people[name]
+    print(f"Found {number}")
+else:
+    print("Not found")
